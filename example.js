@@ -1,5 +1,5 @@
-var moneroWallet = require('./lib/wallet');
-var Wallet = new moneroWallet();
+var ditcoinWallet = require('./lib/wallet');
+var Wallet = new ditcoinWallet();
 
 // examples
 
