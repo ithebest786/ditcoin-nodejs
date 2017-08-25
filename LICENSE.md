@@ -1,3 +1,4 @@
+Copyright (c) 2017 Tindo N. Arsel
 Copyright (c) 2015 Brendan Telzrow
 
 
