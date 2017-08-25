@@ -1,23 +1,23 @@
-# monero-nodejs
+# ditcoin-nodejs
 
-A Node.js wallet manager for interacting with Monero's simplewallet over JSON-RPC. 
+A Node.js wallet manager for interacting with Ditcoin's simplewallet over JSON-RPC. 
 
-For more information about Monero, visit: https://getmonero.org/home
+For more information about Ditcoin, visit: https://ditcoin.io
 
 Donations:
 
-XMR: `47Vmj6BXSRPax69cVdqVP5APVLkcxxjjXdcP9fJWZdNc5mEpn3fXQY1CFmJDvyUXzj2Fy9XafvUgMbW91ZoqwqmQ6RjbVtp`
+XMR: `9RUGwFu3WGh3wAkeWWzMNiQXiW9ChYRpH974mDdrGcjpEcpPrz143oc9sV1W8YyAUwCztbfxt9usZSMVnSBwPxCaDXzhYWz`
 
 ## Install the package 
 
 ### via NPM
 ```
-npm install monero-nodejs
+npm install ditcoin-nodejs
 ```
 
 ### Or clone the Github repository
 ```
-git clone https://github.com/PsychicCat/monero-nodejs.git
+git clone https://github.com/ditcoin/ditcoin-nodejs.git
 ```
 
 ## Initializing a wallet
@@ -25,26 +25,26 @@ git clone https://github.com/PsychicCat/monero-nodejs.git
 Require the module:
 
 ```
-var moneroWallet = require('monero-nodejs');
+var ditcoinWallet = require('ditcoin-nodejs');
 ```
 
 Create a new instance of the wallet:
 
 ```
-var Wallet = new moneroWallet();
+var Wallet = new ditcoinWallet();
 ```
 
 This creates a wallet using the following simplewallet default RPC settings:
    
 * `hostname` - '127.0.0.1'
-* `port` - 18082
+* `port` - 19092
 
 To connect to a wallet with different settings, pass in the values:
 
 ```
-var Wallet = new moneroWallet($HOSTNAME, $PORT);
+var Wallet = new ditcoinWallet($HOSTNAME, $PORT);
 ```
-**Note: versions of monero-nodejs prior to 3.0 require `hostname` with the 'http://' prefix, 3.0 and greater only require the IP address.**
+**Note: versions of ditcoin-nodejs prior to 3.0 require `hostname` with the 'http://' prefix, 3.0 and greater only require the IP address.**
 
 ## Testing
 
@@ -71,12 +71,12 @@ Usage:
 Wallet.balance();
 ```
 
-Responds with the current balance and unlocked (spendable) balance of the wallet in atomic units. Divide by 1e12 to convert.
+Responds with the current balance and unlocked (spendable) balance of the wallet in atomic units. Divide by 1e8 to convert.
     
 Example response: 
 
 ```
-{ balance: 3611980142579999, unlocked_balance: 3611980142579999 }
+{ balance: 361198014257, unlocked_balance: 361198014257 }
 ```
 
 ### address
@@ -86,12 +86,12 @@ Usage:
 Wallet.address();
 ```
 
-Responds with the Monero address of the wallet.
+Responds with the Ditcoin address of the wallet.
 
 Example response:
 
 ```
-{ address: '47Vmj6BXSRPax69cVdqVP5APVLkcxxjjXdcP9fJWZdNc5mEpn3fXQY1CFmJDvyUXzj2Fy9XafvUgMbW91ZoqwqmQ6RjbVtp' }
+{ address: '9RUGwFu3WGh3wAkeWWzMNiQXiW9ChYRpH974mDdrGcjpEcpPrz143oc9sV1W8YyAUwCztbfxt9usZSMVnSBwPxCaDXzhYWz' }
 ```
 
 ### transfer
@@ -101,7 +101,7 @@ Usage:
 Wallet.transfer(destinations, options);
 ```
 
-Transfers Monero to a single recipient OR a group of recipients in a single transaction. Responds with the transaction hash of the payment.
+Transfers Ditcoin to a single recipient OR a group of recipients in a single transaction. Responds with the transaction hash of the payment.
 
 Parameters:
 
@@ -229,7 +229,7 @@ Parameters:
 Example response:
 
 ```
-{ integrated_address: '4HCSju123guax69cVdqVP5APVLkcxxjjXdcP9fJWZdNc5mEpn3fXQY1CFmJDvyUXzj2Fy9XafvUgMbW91ZoqwqmQ96NYBVqEd6JAu9j3gk' }
+{ integrated_address: '9HCSju123guax69cVdqVP5APVLkcxxjjXdcP9fJWZdNc5mEpn3fXQY1CFmJDvyUXzj2Fy9XafvUgMbW91ZoqwqmQ96NYBVqEd6JAu9j3gk' }
 ```
 
 ### splitIntegrated
@@ -243,13 +243,13 @@ Returns the standard address and payment ID corresponding to a given integrated 
 
 Parameters:
 
-* `address` - an integrated Monero address (*string*)
+* `address` - an integrated Ditcoin address (*string*)
 
 Example response:
 
 ```
 { payment_id: '<61eec5ffd3b9cb57>',
-  standard_address: '47Vmj6BXSRPax69cVdqVP5APVLkcxxjjXdcP9fJWZdNc5mEpn3fXQY1CFmJDvyUXzj2Fy9XafvUgMbW91ZoqwqmQ6RjbVtp' }
+  standard_address: '9RUGwFu3WGh3wAkeWWzMNiQXiW9ChYRpH974mDdrGcjpEcpPrz143oc9sV1W8YyAUwCztbfxt9usZSMVnSBwPxCaDXzhYWz' }
 ```
 
 ### height 
