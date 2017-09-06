@@ -6,7 +6,7 @@ For more information about Ditcoin, visit: https://ditcoin.io
 
 Donations:
 
-XMR: `9RUGwFu3WGh3wAkeWWzMNiQXiW9ChYRpH974mDdrGcjpEcpPrz143oc9sV1W8YyAUwCztbfxt9usZSMVnSBwPxCaDXzhYWz`
+DIT: `9RUGwFu3WGh3wAkeWWzMNiQXiW9ChYRpH974mDdrGcjpEcpPrz143oc9sV1W8YyAUwCztbfxt9usZSMVnSBwPxCaDXzhYWz`
 
 ## Install the package 
 
